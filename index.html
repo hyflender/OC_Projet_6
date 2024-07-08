@@ -11,6 +11,10 @@
 </head>
 
 <body>
+    <!-- Tests -->
+
+
+
 
     <header class="container">
         <h1 class="text-center my-4">JustStreamIt</h1>
@@ -21,15 +25,15 @@
         <section id="best-movie" class="mb-5">
             <h1>Meilleur Film</h1>
             <div class="card">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="" class="img-fluid rounded-start" alt="Affiche du meilleur film">
+                <div class="row">
+                    <div class="col-auto width">
+                        <img src="" class="img-fluid" alt="Affiche du meilleur film">
                     </div>
-                    <div class="col-md-8">
+                    <div class="col">
                         <div class="card-body">
                             <h3 class="card-title">Titre du film</h3>
                             <p class="card-text">Synopsis du film</p>
-                            <button class="btn btn-danger">Détails</button>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal">Détails</button>
                         </div>
                     </div>
                 </div>
@@ -76,9 +80,31 @@
         <section id="category-3" class="mb-3">
             <h1>Autres : </h1>
             <select id="category-select" class="form-select">
-                <option value="Romance">Famille</option>
-                <option value="category-2">Comédie</option>
-                <option value="category-3">Catégorie Libre</option>
+                <option value="Action">Action</option>
+                <option value="News">Actualité</option>
+                <option value="Adult">Adulte</option>
+                <option value="Adventure">Aventure</option>
+                <option value="Animation">Animation</option>
+                <option value="Biography">Biographie</option>
+                <option value="Comedy">Comédie</option>
+                <option value="Crime">Crime</option>
+                <option value="Documentary">Documentaire</option>
+                <option value="Drama">Drame</option>
+                <option value="Family">Famille</option>
+                <option value="Fantasy">Fantaisie</option>
+                <option value="Film-Noir">Film-Noir</option>
+                <option value="War">Guerre</option>
+                <option value="History">Histoire</option>
+                <option value="Horror">Horreur</option>
+                <option value="Music">Musique</option>
+                <option value="Musical">Musical</option>
+                <option value="Mystery">Mystère</option>
+                <option value="Reality-TV">Télé réalité</option>
+                <option value="Romance">Romance</option>
+                <option value="Sci-Fi">Science-Fiction</option>
+                <option value="Sport">Sport</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Western">Western</option>
             </select>
             <div class="row">
                 <div class="col-md-4 mb-3">
@@ -96,22 +122,22 @@
 
 
         <!-- Modal -->
-        <div id="modal" class="modal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Détails du film</h5>
-                        <button type="button" class="btn-close" onclick="closeModal()"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Détails du film -->
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" onclick="closeModal()">Fermer</button>
-                    </div>
-                </div>
-            </div>
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5">Détails du film : </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
